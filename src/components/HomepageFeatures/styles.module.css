@@ -6,6 +6,10 @@
 }
 
 .featureSvg {
+  margin-top: 3rem;
+  border-radius: 70%;
   height: 200px;
   width: 200px;
+  overflow: hidden;
+  object-fit: cover;
 }

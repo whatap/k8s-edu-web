@@ -12,14 +12,21 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            🚀 오프라인 사용자 교육 Docs 바로가기
-          </Link>
+        <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
+        <div>
+          <img  src="img/header-image2.png" width={500} alt=""/>
+        </div>
+        <div>
+          <h1 className="hero__title">{siteConfig.title}</h1>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <div className={styles.buttons}>
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/intro">
+              🚀 오프라인 사용자 교육 Docs 바로가기
+            </Link>
+          </div>
+        </div>
         </div>
       </div>
     </header>
