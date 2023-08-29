@@ -5,7 +5,8 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+const config =
+  {
   headTags: [
     {
       tagName: 'script',
@@ -15,10 +16,9 @@ const config = {
       innerHTML: `
                 window.WhatapBrowserAgent = {
                     config: {
-                        projectAccessKey: 'x41s721th3oan-x5028n4us9821p-z235q41qaorkbe',
-                        pcode: 1927,
+                        projectAccessKey: 'x4te823r4ri9p-x107ca46a3pivo-z16j3crpakvotc',
+                        pcode: 30152,
                         sampleRate: 100,
-                        proxyBaseUrl: "https://rumote.whatap-browser-agent.io/"
                     },
                 };
         `,
@@ -26,7 +26,7 @@ const config = {
     {
       tagName: 'script',
       attributes: {
-        src: 'https://repo.whatap-browser-agent.io/rum/dev/v1/whatap-browser-agent.js',
+        src: 'https://repo.whatap-browser-agent.io/rum/prod/v1/whatap-browser-agent.js',
       },
     },
   ],
