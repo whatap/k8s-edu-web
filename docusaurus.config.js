@@ -16,9 +16,10 @@ const config =
       innerHTML: `
                 window.WhatapBrowserAgent = {
                     config: {
-                        projectAccessKey: 'x4te823r4ri9p-x107ca46a3pivo-z16j3crpakvotc',
-                        pcode: 30152,
+                        projectAccessKey: 'x41s721th3oan-x5028n4us9821p-z235q41qaorkbe',
+                        pcode: 1927,
                         sampleRate: 100,
+                        proxyBaseUrl: "https://rumote.whatap-browser-agent.io/",
                     },
                 };
         `,
@@ -26,7 +27,7 @@ const config =
     {
       tagName: 'script',
       attributes: {
-        src: 'https://repo.whatap-browser-agent.io/rum/prod/v1/whatap-browser-agent.js',
+        src: 'https://repo.whatap-browser-agent.io/rum/dev/v1/whatap-browser-agent.js',
       },
     },
   ],
