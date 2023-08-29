@@ -6,6 +6,30 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+      },
+      innerHTML: `
+                window.WhatapBrowserAgent = {
+                    config: {
+                        projectAccessKey: 'x41s721th3oan-x5028n4us9821p-z235q41qaorkbe',
+                        pcode: 1927,
+                        sampleRate: 100,
+                        proxyBaseUrl: "https://rumote.whatap-browser-agent.io/"
+                    },
+                };
+        `,
+    },
+    {
+      tagName: 'script',
+      attributes: {
+        src: 'https://repo.whatap-browser-agent.io/rum/dev/v1/whatap-browser-agent.js',
+      },
+    },
+  ],
   title: 'WhaTap K8S',
   tagline: '와탭으로 쿠버네티스를 거침없이 항해',
   favicon: 'img/favicon.png',
@@ -108,7 +132,7 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Youtube',
+                label: 'YouTube',
                 href: 'https://www.youtube.com/@WhaTapKubernetes',
               },
               {
@@ -131,7 +155,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2022 WhaTap Labs Inc. All rights reserved.`,
+        copyright: `Copyright © 2023 WhaTap Labs Inc. All rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
