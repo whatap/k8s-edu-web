@@ -12,7 +12,7 @@ const FeatureList = [
   },
   {
     username: '조이성',
-    img: 'https://avatars.githubusercontent.com/u/61470181',
+    img: 'img/cho_profile.png',
     description: (
       <>
         Kubernetes 모니터링 화면 개발
