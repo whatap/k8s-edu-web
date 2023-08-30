@@ -11,7 +11,7 @@ authors: chois
 kubectl get pods
 ```
 
-![컨테이너맵 - 파드 카테고리](./img/컨테이너맵_파드_카테고리.png)
+![컨테이너맵 - 파드 카테고리](./img/containermap_pod.png)
 
 컨테이너맵 - 파드 카테고리
 
@@ -21,7 +21,7 @@ kubectl get pods
 kubectl get pods -A
 ```
 
-![컨테이너맵 - 네임스페이스 그룹화](./img/컨테이너맵_네임스페이스_그룹화.png)
+![컨테이너맵 - 네임스페이스 그룹화](./img/containermap_namespace_group.png)
 
 컨테이너맵 - 네임스페이스 그룹화
 
@@ -31,7 +31,7 @@ kubectl get pods -A
 kubectl describe pod {podName}
 ```
 
-![파드 이벤트](./img/파드_이벤트.png)
+![파드 이벤트](./img/kube_event.png)
 
 파드 이벤트
 
@@ -39,15 +39,15 @@ kubectl describe pod {podName}
 kubectl logs pod {podName}
 ```
 
-![컨테이너 로그](./img/컨테이너_로그.png)
+![컨테이너 로그](./img/kube_log.png)
 
 컨테이너 로그
 
 ## 쿠버네티스 구조
 
-![쿠버네티스구조 선박](./img/쿠버네티스구조_선박.png)
+![쿠버네티스구조 선박](./img/kube_arch_ship.png)
 
-![쿠버네티스구조](./img/쿠버네티스구조.png)
+![쿠버네티스구조](./img/kube_arch.png)
 
 ### 마스터 노드
 
@@ -73,11 +73,11 @@ kubectl logs pod {podName}
 - 사용자의 클러스터 내에서 파드 형태로 실행
 - 메타 정보와 각 노드의 성능 정보 수집
 
-![와탭에이전트](./img/와탭에이전트.png)
+![와탭에이전트](./img/whatap_agent.png)
 
 ## [와탭모니터링] 컨테이너맵 - Container
 
-![컨테이너맵 - Container](./img/컨테이너맵_Container.png)
+![컨테이너맵 - Container](./img/containermap_container.png)
 
 ## 컨테이너와 파드의 차이
 
@@ -95,18 +95,18 @@ kubectl logs pod {podName}
 
 ## [와탭모니터링] 컨테이너맵 - 컨테이너 정보, 노드상세, 컨테이너 목록
 
-![컨테이너맵 - 컨테이너 블록 선택](./img/컨테이너맵_컨테이너_블록선택.png)
+![컨테이너맵 - 컨테이너 블록 선택](./img/containermap_block.png)
 
 컨테이너맵 - 컨테이너 블록 선택
 
-![컨테이너 정보](./img/컨테이너_정보.png)
+![컨테이너 정보](./img/container_info.png)
 
 컨테이너 정보
 
-![노드 상세](./img/노드_상세.png)
+![노드 상세](./img/node_detail.png)
 
 노드 상세
 
-![컨테이너 목록](./img/컨테이너_목록.png)
+![컨테이너 목록](./img/container_list.png)
 
 컨테이너 목록
