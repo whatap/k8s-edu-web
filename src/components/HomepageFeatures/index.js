@@ -1,15 +1,13 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    username: 'Irostub',
-    img: 'https://avatars.githubusercontent.com/u/61470181',
+    username: "Irostub",
+    img: "https://avatars.githubusercontent.com/u/61470181",
     description: (
-      <>
-        Kubernetes 모니터링 및 컨테이너 모니터링 수집 서버 관리 및 개발
-      </>
+      <>Kubernetes 모니터링 및 컨테이너 모니터링 수집 서버 관리 및 개발</>
     ),
   },
   {
@@ -22,22 +20,17 @@ const FeatureList = [
     ),
   },
   {
-    username: 'Powered by React',
-    img: 'https://avatars.githubusercontent.com/u/61470181',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    username: "김나현",
+    img: "img/nh_profile.png",
+    description: <>Kubernetes 모니터링 프론트엔드 개발자✨</>,
   },
 ];
 
-function Feature({img, username, description}) {
+function Feature({ img, username, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
-        <img src={img} className={styles.featureSvg} alt={"profile image"}/>
+        <img src={img} className={styles.featureSvg} alt={"profile image"} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{username}</h3>

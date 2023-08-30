@@ -1,17 +1,16 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
-const config =
-  {
+const config = {
   headTags: [
     {
-      tagName: 'script',
+      tagName: "script",
       attributes: {
-        type: 'text/javascript',
+        type: "text/javascript",
       },
       innerHTML: `
                 window.WhatapBrowserAgent = {
@@ -25,29 +24,29 @@ const config =
         `,
     },
     {
-      tagName: 'script',
+      tagName: "script",
       attributes: {
-        src: 'https://repo.whatap-browser-agent.io/rum/dev/v1/whatap-browser-agent.js',
+        src: "https://repo.whatap-browser-agent.io/rum/dev/v1/whatap-browser-agent.js",
       },
     },
   ],
-  title: 'WhaTap K8S',
-  tagline: '와탭으로 쿠버네티스를 거침없이 항해',
-  favicon: 'img/favicon.png',
+  title: "WhaTap K8S",
+  tagline: "와탭으로 쿠버네티스를 거침없이 항해",
+  favicon: "img/favicon.png",
 
   // Set the production url of your site here
-  url: 'https://course.whatapk8s.io',
+  url: "https://course.whatapk8s.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'whatap', // Usually your GitHub org/user name.
-  projectName: 'k8s-edu-web', // Usually your repo name.
+  organizationName: "whatap", // Usually your GitHub org/user name.
+  projectName: "k8s-edu-web", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -59,27 +58,26 @@ const config =
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/whatap/k8s-edu-web/',
+          editUrl: "https://github.com/whatap/k8s-edu-web/",
           // showLastUpdateTime: true,
           showLastUpdateAuthor: true,
         },
         // blog: {
         //   showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // Please change this to your repo.
+        // Remove this to remove the "edit this page" links.
+        // editUrl:
+        //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         // },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -87,71 +85,70 @@ const config =
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    (
-      {
-      colorMode:{
-        defaultMode: 'dark',
+    ({
+      colorMode: {
+        defaultMode: "dark",
         disableSwitch: false,
-        respectPrefersColorScheme: false
+        respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
-      image: 'img/social-card.svg',
+      image: "img/social-card.svg",
       navbar: {
-        title: 'WhaTap',
         logo: {
-          alt: 'WhaTap Logo',
-          src: 'img/whatap.png',
+          alt: "WhaTap Logo",
+          src: "img/whatap_logo_dark.png",
+          srcDark: "img/whatap_logo_light.png",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
+            type: "docSidebar",
+            sidebarId: "tutorialSidebar",
+            position: "left",
+            label: "Tutorial",
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/whatap',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/whatap",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: "Tutorial",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'YouTube',
-                href: 'https://www.youtube.com/@WhaTapKubernetes',
+                label: "YouTube",
+                href: "https://www.youtube.com/@WhaTapKubernetes",
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/whatapk8s',
+                label: "Twitter",
+                href: "https://twitter.com/whatapk8s",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'Docs',
-                href: 'https://docs.whatap.io/',
+                label: "Docs",
+                href: "https://docs.whatap.io/",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/whatap',
+                label: "GitHub",
+                href: "https://github.com/whatap",
               },
             ],
           },
