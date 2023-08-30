@@ -13,12 +13,11 @@ const FeatureList = [
     ),
   },
   {
-    username: 'Focus on What Matters',
+    username: '조이성',
     img: 'https://avatars.githubusercontent.com/u/61470181',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Kubernetes 모니터링 화면 개발
       </>
     ),
   },
