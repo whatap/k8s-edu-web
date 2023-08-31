@@ -4,10 +4,10 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    username: "Irostub",
+    username: "신동민",
     img: "https://avatars.githubusercontent.com/u/61470181",
     description: (
-      <>Kubernetes 모니터링 및 컨테이너 모니터링 수집 서버 관리 및 개발</>
+      <>Kubernetes 수집 서버 관리 및 개발</>
     ),
   },
   {
