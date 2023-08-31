@@ -108,7 +108,7 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: "https://github.com/whatap",
+            href: "https://github.com/whatap/k8s-edu-web",
             label: "GitHub",
             position: "right",
           },
