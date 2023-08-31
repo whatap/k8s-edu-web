@@ -12,7 +12,7 @@ const FeatureList = [
   },
   {
     username: "신동민",
-    img: "https://avatars.githubusercontent.com/u/61470181",
+    img: "/img/memoji_irostub.jpg",
     description: <>Kubernetes 수집 서버 관리 및 개발</>,
   },
   {
