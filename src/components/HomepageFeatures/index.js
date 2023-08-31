@@ -4,25 +4,31 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    username: "신동민",
-    img: "https://avatars.githubusercontent.com/u/61470181",
+    username: "최진식",
+    img:"/img/memoji_jinschoi.jpeg",
     description: (
-      <>Kubernetes 수집 서버 관리 및 개발</>
+      <>Kubernetes 그룹 대빵</>
     ),
   },
   {
-    username: '조이성',
-    img: 'img/cho_profile.png',
-    description: (
-      <>
-        Kubernetes 모니터링 화면 개발
-      </>
-    ),
+    username: "신동민",
+    img: "https://avatars.githubusercontent.com/u/61470181",
+    description: <>Kubernetes 수집 서버 관리 및 개발</>,
+  },
+  {
+    username: "조이성",
+    img: "img/cho_profile.png",
+    description: <>Kubernetes 모니터링 화면 개발</>,
   },
   {
     username: "김나현",
     img: "img/nh_profile.png",
     description: <>Kubernetes 모니터링 프론트엔드 개발자✨</>,
+  },
+  {
+    username: "정진하",
+    img: "img/jh_profile.png",
+    description: <>Kubernetes 수집 서버 관리 및 개발</>,
   },
 ];
 
