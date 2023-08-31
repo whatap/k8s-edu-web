@@ -4,6 +4,13 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
+    username: "최진식",
+    img:"/img/memoji_jinschoi.jpeg",
+    description: (
+      <>Kubernetes 그룹 대빵</>
+    ),
+  },
+  {
     username: "신동민",
     img: "https://avatars.githubusercontent.com/u/61470181",
     description: (
