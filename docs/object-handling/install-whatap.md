@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 authors: irostub
 ---
 # 모니터링 설치
