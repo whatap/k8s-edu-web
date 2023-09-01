@@ -10,7 +10,7 @@ authors: nhkim
 `want-to-busy-container` 의 이미지를 `busybox` 로 수정해놓은 `busy-pod.yaml` 이라는 파일을 `busy-pod` 에 적용합니다.
 
 ```bash
-kubectl apply -f busy-pod.yaml
+kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/030d4889b1c52b7c836c21bc12d19d6c00216369/k8s-object/busy-pod.yaml
 ```
 
 명령어를 실행한 후 파드의 상태를 컨테이너맵에서 실시간으로 확인해볼 수 있습니다.
