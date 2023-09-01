@@ -8,7 +8,7 @@ authors: irostub
 ## Pod 생성 (nginx)
 
 ```bash
-kubectl apply -f https://github.com/whatap/k8s-edu-storage/blob/master/k8s-object/nginx-pod.yaml
+kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/nginx-pod.yaml
 ```
 
 ### 생성된 Pod 확인
@@ -20,7 +20,7 @@ kubectl get pod
 ## Service 생성하여 nginx 외부 노출하기
 
 ```bash
-kubectl apply -f https://github.com/whatap/k8s-edu-storage/blob/master/k8s-object/nginx-service.yaml
+kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/nginx-service.yaml
 ```
 
 ### Service 가 어떤 포트로 외부 노출 시켰는지 조회하기
@@ -66,7 +66,7 @@ Commercial support is available at
 ## ReplicaSet 생성 (busybox)
 
 ```bash
-kubectl apply -f https://github.com/whatap/k8s-edu-storage/blob/master/k8s-object/busybox-replicaset.yaml
+kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/busybox-replicaset.yaml
 ```
 
 ### 생성된 ReplicaSet 확인
@@ -88,7 +88,7 @@ kubectl delete pod {podname}
 ## Deployment 생성 (tomcat)
 
 ```bash
-kubectl apply -f https://github.com/whatap/k8s-edu-storage/blob/master/k8s-object/tomcat-deployment.yaml
+kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/tomcat-deployment.yaml
 ```
 
 ### 생성된 Deployment 확인
@@ -110,7 +110,7 @@ kubectl delete pod {podname}
 ## Service 생성하여 tomcat 외부 노출하기
 
 ```bash
-kubectl apply -f https://github.com/whatap/k8s-edu-storage/blob/master/k8s-object/tomcat-service.yaml
+kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/tomcat-service.yaml
 ```
 
 ### 생성된 Service 확인
@@ -133,5 +133,5 @@ curl http://127.0.0.1:{위에서 조회한 포트}/
 
 ## Namespace 생성
 ```bash
-kubectl apply -f https://github.com/whatap/k8s-edu-storage/blob/master/k8s-object/edu-namespace.yaml
+kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/edu-namespace.yaml
 ```
