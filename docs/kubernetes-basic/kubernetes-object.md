@@ -27,20 +27,20 @@ authors: jhjeong
   - 같은 파드 안에 있는 컨테이너 간에는 `localhost`를 사용하여 서로간에 통신할 수 있다.
 - 파드 정의 파일 예시(YAML)
   ```yaml
-  **apiVersion**: v1
-  **kind**: Pod
+  apiVersion: v1
+  kind: Pod
   metadata:
     name: example-pod
-    **labels**:
+    labels:
       app: example-app
       release: "1.0"
-    **annotations**:
+    annotations:
       example.com/documentation-url: "https://docs.example.com/example-app/1.0"
       example.com/deployment-date: "2023-08-28"
   spec:
     containers:
-    - name: example-container
-      image: example/image:1.0
+      - name: example-container
+        image: example/image:1.0
   ```
 - `labels`: 파드를 ReplicaSet이나 Service와 매핑하기 위한 중요한 식별자로 사용된다.
 - `annotations`: 선택과 필터링을 위한 것이 아닌, 애플리케이션의 문서 URL이나 파드의 배포 날짜와 같은 부가적인 정보를 기록하기 위해 사용된다.
@@ -60,20 +60,20 @@ authors: jhjeong
 - ReplicaSet은 파드를 항상 모니터링 하고 있다가, 레플리카 셋을 생성할 때 설정한 바람직한 파드의 수보다 더 적은 파드만 존재하면 새롭게 파드를 생성한다.
 - 레플리카셋 정의 파일(YAML)
   ```yaml
-  **apiVersion**: apps/v1
-  **kind**: ReplicaSet
+  apiVersion: apps/v1
+  kind: ReplicaSet
   metadata:
     name: example-replicaset
     labels:
       app: example-app
       release: "1.0"
   spec:
-    **replicas: 3 # 원하는 복제본 수를 여기에 지정**
-    **selector:
-      matchLabels:**
+    replicas: 3 # 원하는 복제본 수를 여기에 지정**
+    selector:
+      matchLabels:
         app: example-app #파드의 labels : app과 동일하게 적어준다.
         release: "1.0" #파드의 labels : release와 동일하게 적어준다.
-    **template: #파드 정의**
+    template: #파드 정의**
       metadata:
         labels:
           app: example-app
@@ -83,8 +83,8 @@ authors: jhjeong
           example.com/deployment-date: "2023-08-28"
       spec:
         containers:
-        - name: example-container
-          image: example/image:1.0
+          - name: example-container
+            image: example/image:1.0
   ```
 
 ## Deployment
@@ -99,24 +99,24 @@ authors: jhjeong
 - 디플로이먼트 정의 파일(YAML)
   ```yaml
   apiVersion: apps/v1
-  **kind**: Deployment
+  kind: Deployment
   metadata:
     name: example-deployment
     labels:
       app: example-app
       release: "1.0"
   spec:
-    **replicas**: 3 # 원하는 복제본 수를 여기에 지정
-    **selector:
-      matchLabels:**
+    replicas: 3 # 원하는 복제본 수를 여기에 지정
+    selector:
+      matchLabels:
         app: example-app # 파드의 labels : app과 동일하게 적어준다.
         release: "1.0" # 파드의 labels : release와 동일하게 적어준다.
-    **strategy:
-      type: RollingUpdate**
-      **rollingUpdate:**
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
         maxSurge: 1 # 동시에 생성될 수 있는 파드 수
         maxUnavailable: 1 # 업데이트 중 사용할 수 없는 파드의 최대 수
-    **template: #파드 정의**
+    template: #파드 정의
       metadata:
         labels:
           app: example-app
@@ -126,8 +126,8 @@ authors: jhjeong
           example.com/deployment-date: "2023-08-28"
       spec:
         containers:
-        - name: example-container
-          image: example/image:1.0
+          - name: example-container
+            image: example/image:1.0
   ```
 
 ## Namespace
@@ -152,19 +152,19 @@ authors: jhjeong
 - 파드들이 종료되거나 새로 생성되더라도, 서비스의 IP 주소와 DNS 이름은 변하지 않는다.
 - 서비스 정의 파일 예시(YAML)
   ```yaml
-  **apiVersion**: v1
-  **kind**: Service
+  apiVersion: v1
+  kind: Service
   metadata:
     name: example-service
     labels:
       app: example-app
       release: "1.0"
   spec:
-    **selector: #동일한 엔드포인트를 제공할 파드 선택
+    selector: #동일한 엔드포인트를 제공할 파드 선택
       app: example-app
-      release: "1.0"**
+      release: "1.0"
     ports:
       - protocol: TCP
-        port: 80        # 서비스가 사용할 포트
-        targetPort: 8080  # 파드가 실제로 리스닝하고 있는 포트 (이는 예시이므로 해당 포트에 맞게 조정되어야 한다)
+        port: 80 # 서비스가 사용할 포트
+        targetPort: 8080 # 파드가 실제로 리스닝하고 있는 포트 (이는 예시이므로 해당 포트에 맞게 조정되어야 한다)
   ```

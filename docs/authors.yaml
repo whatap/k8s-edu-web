@@ -4,8 +4,12 @@ irostub:
   url: https://github.com/irostub
   image_url: https://avatars.githubusercontent.com/u/61470181
   email: irostub@gmail.com
-chois: 
+chois:
   name: 조이성
   title: K8s Monitoring Frontend Dev
   image_url: https://github.com/ISungCho
   email: chois9660@gmail.com
+jhjeong:
+  name: 정진하
+  title: K8S Monitoring Server Dev
+  email: jhjeong@whatap.io
