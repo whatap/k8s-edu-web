@@ -5,9 +5,7 @@ authors: jhjeong
 
 # 쿠버네티스의 구조
 
-![출처 - https://devopscube.com/docker-container-clustering-tools/](./img/kube-architecture.webp)
-
-출처 - https://devopscube.com/docker-container-clustering-tools/
+![쿠버네티스 구조](./img/kubernetescluster.png)
 
 - 쿠버네티스 클러스터는 컨테이너화된 애플리케이션을 배포, 스케일 및 관리하기 위한 쿠버네티스의 런타임 환경
 - 클러스터는 여러 노드로 구성되며, 이러한 노드들은 물리적 또는 가상의 서버들을 나타낸다.
@@ -26,7 +24,7 @@ API 서버, etcd, 컨트롤러 매니저, 스케줄러 등의 컴포넌트로 �
 - 모니터링 도구(와탭, 프로메테우스 등)나 서드 파티 서비스 등도 쿠버네티스 클러스터의 정보를 가져오기 위해 이 API 서버에 접근한다.
 - **`kubectl`**을 사용하여 클러스터를 관리할 때, 내부적으로는 HTTP REST API를 통해 kube-apiserver와 통신하게 된다.
 
-![https://devopscube.com/kubernetes-architecture-explained/](./img/kube-api-server.webp)
+![https://devopscube.com/kubernetes-architecture-explained/](./img/kube-api-server.png)
 
 https://devopscube.com/kubernetes-architecture-explained/
 
