@@ -7,12 +7,7 @@ authors: jhjeong
 
 ## Container
 
-<!-- ![find-problem]() -->
-
-![컨테이너와 VM 이미지](./img/containerAndVm.png)
-
-컨테이너와 VM
-이미지 출처 - https://www.docker.com/resources/what-container/
+![컨테이너와 VM 이미지](./img/container-and-vm.png)
 
 - 애플리케이션과 그것을 실행하는데 필요한 모든 의존성(코드, 런타임, 시스템 도구, 시스템 라이브러리 등)을 패키징하는 기술이다.
 - 컨테이너 런타임(Docker, containerd) 위에서 실행되며, 호스트 OS의 커널을 공유한다.
@@ -20,9 +15,7 @@ authors: jhjeong
 
 ## 컨테이너 오케스트레이션 도구(Container Orchestration Tool)
 
-![이미지 출처 - https://k21academy.com/docker-kubernetes/container-orchestration-and-management-options/](./img/containerOrchestration.png)
-
-이미지 출처 - https://k21academy.com/docker-kubernetes/container-orchestration-and-management-options/
+![쿠버네티스의 기능](./img/kubernetes-features.png)
 
 - 컨테이너화된 애플리케이션은 애플리케이션의 리소스 요구사항에 기반하여 스케일업 혹은 스케일 다운 할 수 있어야 한다. 이런 비즈니스 요구사항을 충족시키기 위해서 효율적으로 컨테이너들을 관리하고 스케줄링하기 위한 도구의 필요성이 증대하였다.
 - 쿠버네티스는 이러한 컨테이너 오케스트레이션 도구 중의 하나로, 운영환경에서 컨테이너가 다운 타임 없이 실행될 수 있도록 관리하는 역할을 한다.
