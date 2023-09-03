@@ -102,7 +102,7 @@ authors: jhjeong
       app: example-app
       release: "1.0"
   spec:
-    replicas: # 원하는 복제본의 수를 여기에 지정
+    replicas: 3 # 원하는 복제본의 수를 여기에 지정
     selector:
       matchLabels:
         app: example-app # 파드의 labels : app과 동일하게 적어준다.
@@ -112,7 +112,7 @@ authors: jhjeong
       rollingUpdate:
         maxSurge: 1 # 동시에 생성될 수 있는 파드 수
         maxUnavailable: 1 # 업데이트 중 사용할 수 없는 파드의 최대 수
-    template: #파드 정의
+    template: # 파드 정의
       metadata:
         labels:
           app: example-app
