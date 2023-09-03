@@ -2,46 +2,41 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 목차
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## 1부
 
-## Getting Started
+### 실습 전 준비 사항
 
-Get started by **creating a new site**.
+실습 전에 준비할 사항을 확인하고 설정합니다.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### 쿠버네티스란?
 
-### What you'll need
+쿠버네티스에 대한 기본 개념을 배웁니다.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### 쿠버네이스의 주요 오브젝트
 
-## Generate a new site
+쿠버네티스의 주요 오브젝트의 개념을 배웁니다.
 
-Generate a new Docusaurus site using the **classic template**.
+### 쿠버네티스의 구조
 
-The classic template will automatically be added to your project after you run the command:
+쿠버네티스의 구조를 배웁니니다.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### 오브젝트 다루기 (실습)
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+`kubectl` 명령어로 쿠버네티스의 오브젝트를 다루는 법을 배웁니다.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## 2부
 
-## Start your site
+### CLI와 모니터링을 통한 오브젝트 확인
 
-Run the development server:
+와탭 모니터링을 통해 쿠버네티스 오브젝트를 확인합니다.
 
-```bash
-cd my-website
-npm run start
-```
+### 와탭 모니터링으로 문제 해결하기
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+와탭 모니터링으로 문제를 해결하는 법을 배웁니다.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+### 애플리케이션 (실습)
+### 가시성
+### 리소스 정리
+### Q & A
