@@ -88,14 +88,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       zoom: {
-        selector: '.markdown :not(em) > img',
+        selector: ".markdown :not(em) > img",
         config: {
           // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
           background: {
-            light: 'rgb(255, 255, 255)',
-            dark: 'rgb(50, 50, 50)'
-          }
-        }
+            light: "rgb(255, 255, 255)",
+            dark: "rgb(50, 50, 50)",
+          },
+        },
       },
       colorMode: {
         defaultMode: "dark",
@@ -115,7 +115,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "학습하기",
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -132,7 +132,7 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "학습하기",
                 to: "/docs/intro",
               },
             ],
