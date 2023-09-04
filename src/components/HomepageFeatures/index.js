@@ -36,7 +36,7 @@ const FeatureList = [
   {
     username: "김재영",
     img: "img/jy_profile.png",
-    description: <>💬</>,
+    description: <>쿠버네티스개발그룹 에이전트 개발</>,
   },
 ];
 
