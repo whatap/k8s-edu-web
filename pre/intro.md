@@ -1,6 +1,5 @@
 ---
 sidebar_position: 1
-authors: irostub
 ---
 
 # 실습 환경 접속 준비
@@ -10,7 +9,6 @@ authors: irostub
 :::info
 이미 윈도우 환경에서 ssh client 기능을 활성화 시킨 상태라면 다음 2번으로 건너뛰세요.
 :::
-
 [윈도우 ssh client 활성화 스크린 샷]
 
 ### 2. pem 파일 다운로드
@@ -23,7 +21,7 @@ authors: irostub
 ```bash
 ssh -i pem키파일경로 ubuntu@제공된IP
 ```
-
+---
 ## MAC
 ### 1. pem 파일 다운로드
 이메일에 제공된 kp-k8s-edu.pem 파일을 다운로드 받습니다.

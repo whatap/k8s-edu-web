@@ -62,7 +62,7 @@ Commercial support is available at
 </body>
 </html>
 ```
-
+---
 ## ReplicaSet 생성 (busybox)
 
 ```bash
@@ -84,7 +84,7 @@ kubectl get pod
 ```yaml
 kubectl delete pod {podname}
 ```
-
+---
 ## Deployment 생성 (tomcat)
 
 ```bash
@@ -130,8 +130,9 @@ kubectl get service | grep tomcat-svc
 ```bash
 curl http://127.0.0.1:{위에서 조회한 포트}/
 ```
+---
+## 다음 교육에 사용할 pod 생성
 
-## Namespace 생성
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/edu-namespace.yaml
+kubectl apply -f  https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/not-busy-yet-pod.yaml
 ```

@@ -13,7 +13,7 @@ kubectl apply -f deployment.yaml
 ### 리소스 생성
 kubectl create - 리소스를 생성합니다.
 ```bash
-kubectl kubectl create -f deployment.yaml
+kubectl create -f deployment.yaml
 ```
 ### 리소스 삭제
 kubectl delete - 리소스를 삭제합니다.

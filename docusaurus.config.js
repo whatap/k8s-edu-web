@@ -6,7 +6,6 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  plugins: [require.resolve("docusaurus-plugin-image-zoom")],
   headTags: [
     {
       tagName: "script",
@@ -56,27 +55,27 @@ const config = {
   //   defaultLocale: 'en',
   //   locales: ['en'],
   // },
-
+  plugins: [
+    require.resolve("docusaurus-plugin-image-zoom"),
+    ['@docusaurus/plugin-content-docs',
+      {
+        id: 'pre',
+        path: 'pre',
+        routeBasePath: 'pre',
+        sidebarPath: require.resolve('./sidebars.js'),
+      }]
+  ],
   presets: [
     [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          id: 'docs',
           editUrl: "https://github.com/whatap/k8s-edu-web/",
-          // showLastUpdateTime: true,
           showLastUpdateAuthor: true,
+          sidebarPath: require.resolve("./sidebars.js"),
         },
-        // blog: {
-        //   showReadingTime: true,
-        // Please change this to your repo.
-        // Remove this to remove the "edit this page" links.
-        // editUrl:
-        //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -116,8 +115,15 @@ const config = {
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "학습하기",
+            docsPluginId: 'docs'
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: "docSidebar",
+            sidebarId: "pre",
+            position: "left",
+            label: "사전 설정",
+            docsPluginId: 'pre'
+          },
           {
             href: "https://github.com/whatap/k8s-edu-web",
             label: "GitHub",
