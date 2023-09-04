@@ -51,7 +51,11 @@ authors: jhjeong
 
 ## Worker Node
 
+![쿠버네티스 컴포넌트](./img/workernodecomponentsonly.png)
+
 ### kubelet
+
+![쿠버네티스 컴포넌트](./img/worker-controlplane.png)
 
 - **노드 등록**: 워커 노드의 정보와 스펙을 kube-apiserver에 등록시키는 역할을 한다.
 - **파드 수명주기 관리**: API 서버에서 받아온 podSpec을 사용하여 파드를 생성, 업데이트 또는 삭제하는 작업을 수행한다.
