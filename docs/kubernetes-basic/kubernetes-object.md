@@ -64,7 +64,7 @@ authors: jhjeong
       app: example-app
       release: "1.0"
   spec:
-    greplicas: 3 # 원하는 복제본 수를 여기에 지정
+    replicas: 3 # 원하는 복제본 수를 여기에 지정
     selector:
       matchLabels:
         app: example-app # 파드의 labels : app과 동일하게 적어준다.
