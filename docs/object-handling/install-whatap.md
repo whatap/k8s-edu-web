@@ -41,3 +41,7 @@ kubectl get node -o wide
 ```bash
 kubectl apply -f whatap_kube_containerd_1.16.yaml
 ```
+
+### 컨테이너 맵 확인
+
+### 다음 실습을 위한 로그 모니터링 설정
