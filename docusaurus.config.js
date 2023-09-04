@@ -159,7 +159,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/whatap",
+                href: "https://github.com/whatap/kuber-apm-boilerplate",
               },
             ],
           },
