@@ -7,7 +7,9 @@ authors: nhkim
 
 [오브젝트 다루기 (실습)](../object-handling/general-command) 에서 생성한 리소스들을 컨테이너맵 메뉴에서 모니터링하고 있는데, `busy-pod` 라는 이름의 파드 하나가 계속 Pending 상태로 표시되고 있습니다.
 
-`busy-pod` 가 정상적으로 동작하도록 원인을 찾아 문제를 해결해야합니다.
+파드는 정의된 수명 주기를 따르는데, Pending 상태에서 시작해서 모든 컨테이너가 정상적으로 시작되면 Running으로 변한 다음, 파드의 컨테이너가 성공적으로 종료되었는지에 따라 Succeeded 또는 Failed 단계를 거칩니다.
+
+`busy-pod` 를 Running 상태로 바꾸기 위해 원인을 찾아 문제를 해결해야 합니다.
 
 ![find-problem](./img/intro.png)
 
