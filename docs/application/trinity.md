@@ -1,40 +1,91 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 authors: jaeyoungkim
 ---
 
 
-# 서비스 아키텍쳐
-<br/><br/>
-
-
-### 모놀리식(Monolithic)
+# 트리니티 테스트
 <br/>
-여러 비즈니스 기능이 하나의 공간에서 수행되는 전통적인 구조입니다.
+
+## 서비스, 디플로이먼트, 잡을 실제로 생성해보자
+<br/>
+
+### 사전작업 - 1. 어플리케이션 yaml 파일 다운
+```bash
+git clone https://github.com/whatap/kuber-apm-boilerplate
+```
+<br/>
+
+```bash
+cd kuber-apm-boilerplate/python/fastapi/
+```
+<br/>
+
+### 사전작업 - 2. 와탭 설정
+
+#### 수집서버
+```bash
+sed -i 's/{WHATAP_SERVER_HOST}/"13.124.11.223\/13.209.172.35"/g' app_deployment.yaml
+```
+<br/>
+
+#### 라이센스 키 
+그대로 복사 하면 안됨, YOUR-LICENSE-KEY 에 자신의 와탭 라이센스 키 입력
+```bash
+sed -i 's/{WHATAP_LICENSE}/"YOUR-LICENSE-KEY"/g' app_deployment.yaml
+```
+<br/>
+
+
+#### 와탭에서 인식할 아이디 설정
+```bash
+sed -i 's/{WHATAP_APP_NAME}/"JOB-TRIGGER"/g' app_deployment.yaml
+```
+<br/>
+
+#### 와탭 로그 설정
+```bash
+sed -i 's/{WHATAP_LOGGING_ENABLED}/"true"/g' app_deployment.yaml
+```
+<br/>
+
+#### 결과 확인
+
+```bash
+cat app_deployment.yaml
+```
+
+![whatap_result.png](./img/whatap_result.png)
+
 <br/><br/>
 
-![arch_monol.png](./img/arch_monol.png)
-
-
-<h3 align="center"> →  하나의 모듈에서 문제 발생 시 연쇄 반응</h3>
-<br/><br/><br/>
-
-### MSA
-작은 단위의 비즈니스 기능을 독립적으로 실행하는 구조입니다.
+## 어플리케이션 yaml 파일실행
 <br/><br/>
 
-![acrh_k.png](./img/arch_k_2.png)
+### 1. SERVICE - 노드포트 서비스 생성합니다.
+<br/><br/><br/><br/>
 
-<h3 align="center"> →  서로의 환경에 영향을 주지 않음, 서비스 중지 최소화(가용성)</h3>
-<br/><br/><br/><br/><br/><br/>
+![yaml_service.png](./img/yaml_service.png)
+<br/><br/><br/><br/><br/>
+
+### 2. Deployment - 웹서버의 역할을 하는 파드를 배포합니다.
+<br/><br/><br/><br/>
+
+![yaml_dep.png](./img/yaml_dep.png)
+<br/><br/><br/><br/><br/>
+
+### 3. JOB - 웹서버의 요청을 받아 작업(크롤링, 파싱)을 수행합니다.
+<br/><br/><br/><br/>
+
+![yaml_job.png](./img/yaml_job.png)
+<br/><br/><br/><br/><br/>
 
 
-### 쿠버네티스 친화적 구조도
-![acrh_prog.png](./img/arch_prog.png)
+### 위 3가지 오브젝트(service, deployment, job) 생성
 
+```bash
+kubectl apply -f app_deployment.yaml
+```
+<br/>
 
-
-<br/><br/><br/><br/><br/><br/>
-
-
-
+![explosion.png](./img/explosion.png)
