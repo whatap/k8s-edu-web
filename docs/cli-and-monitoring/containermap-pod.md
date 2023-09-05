@@ -28,7 +28,7 @@ kubectl get pods -A
 ## 대상정보, 이벤트, 로그 확인하기
 
 ```shell
-kubectl describe pod {podName}
+kubectl describe pod {POD_NAME}
 ```
 
 ![파드 이벤트](./img/kube_event.png)
@@ -36,7 +36,7 @@ kubectl describe pod {podName}
 파드 이벤트
 
 ```shell
-kubectl logs pod {podName}
+kubectl logs pod {POD_NAME}
 ```
 
 ![컨테이너 로그](./img/kube_log.png)

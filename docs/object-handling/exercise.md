@@ -32,7 +32,7 @@ kubectl get service | grep nginx-svc
 ### 노출된 nginx 홈페이지 호출하기
 
 ```bash
-curl http://127.0.0.1:{위에서 조회한 포트}/
+curl http://127.0.0.1:{SERVICE_PORT}/
 ```
 
 ### 성공 결과
@@ -82,7 +82,7 @@ kubectl get pod
 ```
 
 ```yaml
-kubectl delete pod {podname}
+kubectl delete pod {POD_NAME}
 ```
 ---
 ## Deployment 생성 (tomcat)
@@ -104,7 +104,7 @@ kubectl get pod
 ```
 
 ```yaml
-kubectl delete pod {podname}
+kubectl delete pod {POD_NAME}
 ```
 
 ## Service 생성하여 tomcat 외부 노출하기
@@ -128,7 +128,7 @@ kubectl get service | grep tomcat-svc
 ### 노출된 tomcat 홈페이지 호출하기
 
 ```bash
-curl http://127.0.0.1:{위에서 조회한 포트}/
+curl http://127.0.0.1:{SERVICE_PORT}/
 ```
 ---
 ## 다음 교육에 사용할 pod 생성
