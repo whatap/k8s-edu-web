@@ -4,7 +4,7 @@ authors: jaeyoungkim
 ---
 
 
-# 서비스 소개
+# 2. 서비스 소개
 <br/>
 
 ## 제공하는 기능

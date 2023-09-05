@@ -4,7 +4,7 @@ authors: jaeyoungkim
 ---
 
 
-# 서비스 아키텍쳐
+# 3. 서비스 아키텍쳐
 <br/><br/>
 
 

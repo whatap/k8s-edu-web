@@ -4,7 +4,7 @@ authors: jaeyoungkim
 ---
 
 
-# 트리니티 테스트
+# 4. 트리니티 테스트
 <br/>
 
 ## 서비스, 디플로이먼트, 잡을 실제로 생성해보자
@@ -88,4 +88,29 @@ kubectl apply -f app_deployment.yaml
 ```
 <br/>
 
+### 결과 확인
 ![explosion.png](./img/explosion.png)
+
+#### 디플로이먼트 확인
+
+```bash
+kubectl get deployments -n k8s-edu-ondemand-request
+```
+
+#### 서비스 확인
+
+```bash
+kubectl get services -n k8s-edu-ondemand-request
+```
+
+#### 파드 확인
+
+```bash
+kubectl get pods -n k8s-edu-ondemand-request
+```
+<br/>
+
+#### 와탭에서 확인
+
+- 대시보드> 컨테이너 맵
+- 네임스페이스 : **k8s-edu-ondemand-request**
