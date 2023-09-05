@@ -3,11 +3,11 @@ sidebar_position: 2
 authors: chois
 ---
 
-# 컨테이너 중심으로 본 컨테이너맵
+# 컨테이너 중심으로 본 컨테이너 맵
 
 ## Container 카테고리 선택하기
 
-![컨테이너맵 - Container](./img/containermap_container.png)
+![컨테이너 맵 - Container](./img/containermap_container.png)
 
 
 > ### ❓ 컨테이너 vs 파드
@@ -27,9 +27,9 @@ authors: chois
 
 ## 컨테이너 정보, 노드상세, 컨테이너 목록 확인하기
 
-![컨테이너맵 - 컨테이너 블록 선택](./img/containermap_block.png)
+![컨테이너 맵 - 컨테이너 블록 선택](./img/containermap_block.png)
 
-컨테이너맵 - 컨테이너 블록 선택
+컨테이너 맵 - 컨테이너 블록 선택
 
 ![컨테이너 정보](./img/container_info.png)
 

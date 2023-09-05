@@ -3,7 +3,7 @@ sidebar_position: 1
 authors: chois
 ---
 
-# 파드 중심으로 본 컨테이너맵
+# 파드 중심으로 본 컨테이너 맵
 
 ## Pod 카테고리 선택하기
 
@@ -11,9 +11,9 @@ authors: chois
 kubectl get pods
 ```
 
-![컨테이너맵 - 파드 카테고리](./img/containermap_pod.png)
+![컨테이너 맵 - 파드 카테고리](./img/containermap_pod.png)
 
-컨테이너맵 - 파드 카테고리
+컨테이너 맵 - 파드 카테고리
 
 ## 네임스페이스, 리플리카셋, 디플로디먼트 그룹화 하기
 
@@ -21,9 +21,9 @@ kubectl get pods
 kubectl get pods -A
 ```
 
-![컨테이너맵 - 네임스페이스 그룹화](./img/containermap_namespace_group.png)
+![컨테이너 맵 - 네임스페이스 그룹화](./img/containermap_namespace_group.png)
 
-컨테이너맵 - 네임스페이스 그룹화
+컨테이너 맵 - 네임스페이스 그룹화
 
 ## 대상정보, 이벤트, 로그 확인하기
 

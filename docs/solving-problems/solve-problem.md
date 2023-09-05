@@ -13,7 +13,7 @@ authors: nhkim
 kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/030d4889b1c52b7c836c21bc12d19d6c00216369/k8s-object/busy-pod.yaml
 ```
 
-명령어를 실행한 후 파드의 상태를 컨테이너맵에서 실시간으로 확인해볼 수 있습니다.
+명령어를 실행한 후 파드의 상태를 컨테이너 맵에서 실시간으로 확인해볼 수 있습니다.
 
 ![solve-problem-map](./img/solve-problem-map.png)
 
@@ -21,4 +21,4 @@ kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/030d48
 
 ![solve-problem-meta](./img/solve-problem-meta.png)
 
-컨테이너맵에서 busy-pod의 상태가 Running이고, `want-to-busy-container` 컨테이너에 `busybox` 이미지가 적용된 것을 확인할 수 있습니다.
+컨테이너 맵에서 busy-pod의 상태가 Running이고, `want-to-busy-container` 컨테이너에 `busybox` 이미지가 적용된 것을 확인할 수 있습니다.
