@@ -6,7 +6,7 @@ authors: irostub
 
 ### WhaTap 회원가입 및 로그인
 
-https://service.whatap.io/account/login
+https://preview.whatap.io/account/login
 
 ### 계정 언어 설정 변경
 
