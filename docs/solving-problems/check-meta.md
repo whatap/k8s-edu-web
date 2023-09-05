@@ -18,4 +18,4 @@ authors: nhkim
 
 컨테이너의 이미지는 `spec.containers[*].image` 에 정의합니다.
 
-`want-to-busy-container` 라는 컨테이너에서 문제가 되는 `changetheimagetobusybox` 이미지를 사용하는것이 확인됩니다.
+`want-to-busy-container` 라는 컨테이너에서 문제가 되는 이미지를 사용하는 것이 확인됩니다.

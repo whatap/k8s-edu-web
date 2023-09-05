@@ -5,7 +5,7 @@ authors: nhkim
 
 # 문제 해결하기
 
-존재하지 않는 이미지인 `changetheimagetobusybox` 를 `busybox` 라는 이미지로 교체해서 파드가 정상적으로 동작하도록 수정합니다.
+문제가 되는 이미지를 `busybox` 라는 이미지로 교체해서 파드가 정상적으로 동작하도록 수정합니다.
 
 `want-to-busy-container` 의 이미지를 `busybox` 로 수정해놓은 `busy-pod.yaml` 이라는 파일을 `busy-pod` 에 적용합니다.
 
