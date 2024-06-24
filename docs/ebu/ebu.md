@@ -15,9 +15,7 @@ authors: irostub
 
 따라서 실제 운영 환경에서는 이런 요구사항을 충족할 수 있는 모니터링 솔루션을 도입해 보다 체계적이고 전문적인 모니터링 환경을 구축합니다.
 
-:::info
-
-💡 이번 실습에서는 다음과 같은 활동을 합니다.
+:::info 이번 실습에서는 다음과 같은 활동을 합니다.
 
 1. 명령어 없이 시각적으로 이전에 생성한 리소스를 살펴봅니다.
 2. 실제 java 웹 애플리케이션을 배포합니다.
@@ -74,8 +72,7 @@ authors: irostub
 
    ![img_7.png](img_7.png)
 
-:::tip
-💡 다운로드 파일은 기본적으로 아래 위치에 있습니다.  
+:::tip 다운로드 파일은 기본적으로 아래 위치에 있습니다.  
 windows - `C:\Users\{사용자이름}\Downloads\whatap_kube_agent.yaml`  
 macOS - `/Users/{사용자이름}/Downloads/whatap_kube_agent.yaml`  
 windows, macOS 모두 경로 이동 시 `cd` 명령을 사용하여 이동합니다.
