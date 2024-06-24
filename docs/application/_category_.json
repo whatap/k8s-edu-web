@@ -1,8 +1,0 @@
-{
-  "label": "쿠버네티스를 이용한 온디맨드 서비스 배포",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "쿠버네티스 기술이 비즈니스에서 어떻게 사용되는지 실습을 통해서 이해합니다."
-  }
-}
