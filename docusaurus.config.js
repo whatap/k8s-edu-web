@@ -35,7 +35,7 @@ const config = {
   favicon: "img/favicon.png",
 
   // Set the production url of your site here
-  url: "https://course.whatapk8s.io",
+  url: "https://course.whatapk8s.net",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -57,13 +57,15 @@ const config = {
   // },
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
-    ['@docusaurus/plugin-content-docs',
+    [
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'pre',
-        path: 'pre',
-        routeBasePath: 'pre',
-        sidebarPath: require.resolve('./sidebars.js'),
-      }]
+        id: "pre",
+        path: "pre",
+        routeBasePath: "pre",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
+    ],
   ],
   presets: [
     [
@@ -71,7 +73,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          id: 'docs',
+          id: "docs",
           editUrl: "https://github.com/whatap/k8s-edu-web/",
           showLastUpdateAuthor: true,
           sidebarPath: require.resolve("./sidebars.js"),
@@ -115,15 +117,15 @@ const config = {
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "학습하기",
-            docsPluginId: 'docs'
+            docsPluginId: "docs",
           },
-          {
-            type: "docSidebar",
-            sidebarId: "pre",
-            position: "left",
-            label: "사전 설정",
-            docsPluginId: 'pre'
-          },
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "pre",
+          //   position: "left",
+          //   label: "사전 설정",
+          //   docsPluginId: "pre",
+          // },
           {
             href: "https://github.com/whatap/k8s-edu-web",
             label: "GitHub",
@@ -170,7 +172,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2023 WhaTap Labs Inc. All rights reserved.`,
+        copyright: `©2024. WhaTap Labs Inc. all rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
