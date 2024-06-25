@@ -9,7 +9,7 @@ authors: nhkim
 
 컨테이너는 소프트웨어 개발과 배포에서 애플리케이션을 독립적으로 실행할 수 있는 가상 환경입니다. 애플리케이션과 그 의존성을 함께 패키징하여 어디서나 일관되게 실행할 수 있다는 장점이 있습니다. 컨테이너를 실행하고 관리하는 소프트웨어를 컨테이너 런타임이라 하는데, 대표적인 컨테이너 런타임으로는 도커가 있습니다.
 
-![container_vs_vm](container_vs_vm.png)
+![container_vs_vm](/img/hello-k8s/container_vs_vm.png)
 
 :::tip <b>가상 머신과 컨테이너가 다른점은 무엇인가요?</b>
 
@@ -25,7 +25,7 @@ authors: nhkim
 
 그러나, 많게는 수십에서 수백 개의 서비스가 독립적으로 운영되기 때문에, 이를 효과적으로 관리하기 위한 오케스트레이션 도구의 필요성이 커졌습니다. 이러한 배경을 바탕으로 쿠버네티스가 등장하게 되었습니다.
 
-![k8s_advantages](k8s_advantages.png)
+![k8s_advantages](/img/hello-k8s/k8s_advantages.png)
 
 ### 쿠버네티스를 사용하는 이유가 있나요?
 
@@ -111,17 +111,17 @@ spec:
 docker ps -a
 ```
 
-![docker-ps-a](docker-ps-a.png)
+![docker-ps-a](/img/hello-k8s/docker-ps-a.png)
 
 만약 컨테이너의 STATUS가 Exited라면, 다음 명령어를 실행하여 다시 컨테이너를 다시 실행합니다.
 
-![docker-ps-a-exited](docker-ps-a-exit.png)
+![docker-ps-a-exited](/img/hello-k8s/docker-ps-a-exit.png)
 
 ```jsx
 minikube start
 ```
 
-![minikube_start](minikube_start.png)
+![minikube_start](/img/hello-k8s/minikube_start.png)
 
 ## Pod: 쿠버네티스의 가장 작은 배포 단위
 
@@ -131,7 +131,7 @@ minikube start
 - Pod 안에 존재하는 컨테이너는 리소스를 공유합니다.
 - 같은 Pod 안에 있는 컨테이너 간에는 `localhost`를 사용하여 서로 통신할 수 있습니다.
 
-![introduce_pod](introduce_pod.png)
+![introduce_pod](/img/hello-k8s/introduce_pod.png)
 
 ### Pod 생성해보기
 
@@ -162,7 +162,7 @@ minikube start
    kubectl get pod
    ```
 
-   ![introduce_pod_get](introduce_pod_get.png)
+   ![introduce_pod_get](/img/hello-k8s/introduce_pod_get.png)
 
    `-o wide` 옵션을 사용하면 더 자세한 정보를 출력할 수 있습니다.
 
@@ -216,13 +216,13 @@ ReplicaSet의 상위 개념으로, Deployment를 통해 특정 버전으로 배�
    kubectl get deployment
    ```
 
-   ![introduce_deploy_get](introduce_deploy_get.png)
+   ![introduce_deploy_get](/img/hello-k8s/introduce_deploy_get.png)
 
    ```bash
    kubectl get pod
    ```
 
-   ![introduce_deploy_get_pod](introduce_deploy_get_pod.png)
+   ![introduce_deploy_get_pod](/img/hello-k8s/introduce_deploy_get_pod.png)
 
 3. `delete` 명령어를 통해 Deployment로 배포된 Pod 중 하나를 삭제합니다.
 
@@ -230,7 +230,7 @@ ReplicaSet의 상위 개념으로, Deployment를 통해 특정 버전으로 배�
    kubectl delete pod {POD_NAME}
    ```
 
-   ![introduce_deploy_delete_pod](introduce_deploy_delete_pod.png)
+   ![introduce_deploy_delete_pod](/img/hello-k8s/introduce_deploy_delete_pod.png)
 
 4. 다시 Pod 목록을 조회하면 새로운 Pod가 자동으로 생성된 것을 확인할 수 있습니다.
 
@@ -238,13 +238,13 @@ ReplicaSet의 상위 개념으로, Deployment를 통해 특정 버전으로 배�
    kubectl get pod
    ```
 
-   ![introduce_deploy_get_deleted_pod](introduce_deploy_get_deleted_pod.png)
+   ![introduce_deploy_get_deleted_pod](/img/hello-k8s/introduce_deploy_get_deleted_pod.png)
 
 ## Service: 클러스터 통신 담당
 
 Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽에 노출시키는 역할을 합니다. 애플리케이션의 여러 인스턴스가 각기 다른 Pod에서 동작하더라도 서비스를 사용하면 모든 Pod에 대한 단일 DNS 이름과 IP 주소를 갖게 됩니다. 또한 Pod가 종료되거나 새로 생성되더라도 서비스의 IP 주소와 DNS 이름은 변하지 않습니다.
 
-![introduce_svc](introduce_svc.png)
+![introduce_svc](/img/hello-k8s/introduce_svc.png)
 
 <ImageWithCaption src="introduce_svc.png" caption="test" />
 
@@ -277,7 +277,7 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
    kubectl get service
    ```
 
-   ![introduce_svc_get](introduce_svc_get.png)
+   ![introduce_svc_get](/img/hello-k8s/introduce_svc_get.png)
 
 3. 서비스 조회 명령어 뒤에 서비스 이름을 명시하면 해당 서비스의 정보만 조회할 수 있습니다. tomcat-svc가 어떤 포트로 tomcat을 노출 시켰는지 조회합니다.
 
@@ -285,7 +285,7 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
    kubectl get service tomcat-svc
    ```
 
-   ![introduce_svc_tomcat](introduce_svc_tomcat.png)
+   ![introduce_svc_tomcat](/img/hello-k8s/introduce_svc_tomcat.png)
 
 4. minikube 컨테이너 외부로 포트를 노출합니다.
 
@@ -293,11 +293,11 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
    minikube service tomcat-svc --url
    ```
 
-   ![introduce_svc_expose](introduce_svc_expose.png)
+   ![introduce_svc_expose](/img/hello-k8s/introduce_svc_expose.png)
 
 5. 크롬에 minikube 명령을 실행하여 나온 url을 입력하여 접속하면, 다음과 같이 tomcat 기본 화면이 노출됩니다.
 
-   ![introduce_svc_tomcatpage](introduce_svc_tomcatpage.png)
+   ![introduce_svc_tomcatpage](/img/hello-k8s/introduce_svc_tomcatpage.png)
 
 6. 터미널에서 `ctrl + c` (window) 또는 `cmd + c` (mac)를 입력하면 노출시킨 서비스를 종료합니다.
 
@@ -307,4 +307,4 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
 
 예를 들어, 개발(**`DEV`**) 환경과 품질 보증(**`QA`**) 환경이 동일한 클러스터에서 실행될 때, **`DEV`**와 **`QA`**라는 두 개의 분리된 네임스페이스를 생성할 수 있습니다.
 
-![introduce_ns](introduce_ns.png)
+![introduce_ns](/img/hello-k8s/introduce_ns.png)

@@ -33,7 +33,6 @@ const config = {
   title: "WhaTap K8S",
   tagline: "와탭으로 쿠버네티스를 거침없이 항해",
   favicon: "img/favicon.png",
-
   // Set the production url of your site here
   url: "https://course.whatapk8s.net",
   // Set the /<baseUrl>/ pathname under which your site is served
