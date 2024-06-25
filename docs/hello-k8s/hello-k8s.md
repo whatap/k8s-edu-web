@@ -36,9 +36,7 @@ authors: nhkim
 - **자동 복구(Self-Healing)**: 컨테이너가 오류로 다운되거나 문제가 발생하면, 헬스 체크 후 자동으로 새로운 컨테이너를 실행시킬 수 있습니다.
 - **제로 다운 타임 배포(Zero Downtime Deployments)**: 애플리케이션을 중단 없이 새로운 버전으로 업데이트하여 사용자 경험을 향상시킵니다.
 
-# 쿠버네티스의 주요 오브젝트 이해하기
-
-## 쿠버네티스 오브젝트를 다루는 방식
+## 쿠버네티스 오브젝트를 다뤄봅시다
 
 쿠버네티스 오브젝트를 생성하고 관리하기 위해 `kubectl`이라는 CLI 도구를 사용합니다. `kubectl`을 사용하는 방법은 크게 명령형과 선언형 두 가지로 나뉩니다.
 
@@ -102,10 +100,9 @@ spec:
 - `kubectl expose` : 쿠버네티스 서비스를 생성하여 오브젝트를 노출하는 명령어입니다.  
   예) `kubectl expose deployment my-deployment --type=NodePort --name=my-service`
 
-## 쿠버네티스 학습 도구, minikube에 대해 알아봅시다
+## minikube로 쿠버네티스 시작하기
 
 [minikube](https://minikube.sigs.k8s.io/docs/)는 쿠버네티스를 쉽게 배우고 개발할 수 있도록 하는 데 중점을 둔 로컬 쿠버네티스입니다.
-
 단일 노드의 쿠버네티스 클러스터를 가상 환경 또는 컨테이너로 실행하여 쿠버네티스의 다양한 기능을 로컬 환경에서 사용할 수 있게 합니다.
 
 다음 명령어를 실행하여 minikube 컨테이너가 존재하는지 확인할 수 있습니다.
@@ -116,15 +113,15 @@ docker ps -a
 
 ![docker-ps-a](docker-ps-a.png)
 
-### minikube 시작하기
+만약 컨테이너의 STATUS가 Exited라면, 다음 명령어를 실행하여 다시 컨테이너를 다시 실행합니다.
 
 ![docker-ps-a-exited](docker-ps-a-exit.png)
-
-만약 컨테이너의 STATUS가 Exited라면, 다음 명령어를 실행하여 다시 컨테이너를 다시 실행합니다.
 
 ```jsx
 minikube start
 ```
+
+![minikube_start](minikube_start.png)
 
 ## Pod: 쿠버네티스의 가장 작은 배포 단위
 
@@ -249,9 +246,11 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
 
 ![introduce_svc](introduce_svc.png)
 
+<ImageWithCaption src="introduce_svc.png" caption="test" />
+
 ### Service를 생성해 tomcat을 외부에 노출하기
 
-1. `apply` 명령어를 통해 YAML 파일에 정의된 Service를 실행합니다.
+1. `apply` 명령어를 통해 YAML 파일에 정의된 서비스를 실행합니다.
 
    ```bash
    kubectl apply -f https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/tomcat-service.yaml
@@ -272,7 +271,7 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
          targetPort: 8080 #Pod가 실제로 리스닝하고 있는 포트를 지정합니다.
    ```
 
-2. `get` 명령어를 통해 Service가 생성되었는지 확인합니다.
+2. `get` 명령어를 통해 서비스가 생성되었는지 확인합니다.
 
    ```yaml
    kubectl get service
@@ -280,7 +279,7 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
 
    ![introduce_svc_get](introduce_svc_get.png)
 
-3. Service가 어떤 포트로 tomcat을 노출 시켰는지 조회하기
+3. 서비스 조회 명령어 뒤에 서비스 이름을 명시하면 해당 서비스의 정보만 조회할 수 있습니다. tomcat-svc가 어떤 포트로 tomcat을 노출 시켰는지 조회합니다.
 
    ```bash
    kubectl get service tomcat-svc
@@ -296,11 +295,9 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
 
    ![introduce_svc_expose](introduce_svc_expose.png)
 
-5. 크롬에 minikube 명령을 실행하여 나온 url을 입력하여 접속합니다.
+5. 크롬에 minikube 명령을 실행하여 나온 url을 입력하여 접속하면, 다음과 같이 tomcat 기본 화면이 노출됩니다.
 
    ![introduce_svc_tomcatpage](introduce_svc_tomcatpage.png)
-
-   톰캣 기본 화면이 노출됩니다.
 
 6. 터미널에서 `ctrl + c` (window) 또는 `cmd + c` (mac)를 입력하면 노출시킨 서비스를 종료합니다.
 
