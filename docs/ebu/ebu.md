@@ -510,11 +510,6 @@ caller-deploy라는 이름을 가진 Deployment의 Pod수가 1개에서 3개로 
 
 </details>
 
-<details>
-<summary>Pod의 로그엔 어떤 일이 발생하나요?</summary>
-
-</details>
-
 ### DB의 느린 조회 발생
 
 DB 느리게 버튼을 눌러 이벤트를 발생시켜보고 원인을 추적해봅니다.
@@ -547,6 +542,15 @@ CPU 부하 상승 버튼을 눌러 이벤트를 발생시켜보고 원인을 추
 
 <details>
 <summary>왜 CPU의 부하가 상승했을까요?</summary>
+
+   ![img_33.png](/img/ebu/img_33.png)
+CPU 부하 상승 버튼을 누른 뒤에 액티브 트랜젝션 수가 늘어나는 것을 확인할 수 있습니다.  
+이제 이 액티브 트랜젝션을 누른 뒤 오래 걸린 트랜젝션을 선택해보면 아래와 같은 콜스택을 확인할 수 있습니다.  
+
+   ![img_34.png](/img/ebu/img_34.png)
+
+CallerService#isPrime() : 소수를 판단하는 로직에서 현재 진행 중이라는 것을 알 수 있습니다.
+
 </details>
 
 ## 정말로 모니터링 솔루션이 필요할까?
@@ -570,8 +574,8 @@ CPU 부하 상승 버튼을 눌러 이벤트를 발생시켜보고 원인을 추
 1. 다음 명령어를 실행하여 minikube 컨테이너를 삭제합니다.
 
    ```bash
-   minikube stop & REM stops the VM
-   minikube delete & REM deleted the VM
+   minikube stop
+   minikube delete
    ```
 
 2. kubernetes 디렉토리를 삭제하여 쿠버네티스 관련 설정 파일을 제거합니다.
