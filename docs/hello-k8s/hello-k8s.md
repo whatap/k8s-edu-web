@@ -77,7 +77,7 @@ spec:
         - containerPort: 80
 ```
 
-\*Pod를 생성하기 위한 YAML 예시로, 각 속성은 오브젝트마다 조금씩 다릅니다.
+<p style={{color:'gray'}}>*Pod를 생성하기 위한 YAML 예시로, 각 속성은 오브젝트마다 조금씩 다릅니다.</p>
 
 선언형 방식은 명령형보다 그 문법 체계가 확고하고 보다 많은 정보를 포함하기 때문에 상대적으로 더 어렵지만, 파일로 직접 기술하여 사용하는 만큼 명령형의 단점을 해결할 수 있는 방식입니다.
 
@@ -123,7 +123,7 @@ minikube start
 
 ![minikube_start](/img/hello-k8s/minikube_start.png)
 
-## Pod: 쿠버네티스의 가장 작은 배포 단위
+## Pod
 
 쿠버네티스에서 가장 작은 배포 단위를 Pod(파드)라고 합니다. 각각의 Pod는 유니크한 IP를 가지고 있으며, Pod는 하나 이상의 컨테이너로 구성될 수 있습니다.
 
@@ -166,19 +166,19 @@ minikube start
 
    `-o wide` 옵션을 사용하면 더 자세한 정보를 출력할 수 있습니다.
 
-## ReplicaSet: Pod 프로텍터
+## ReplicaSet
 
 Pod를 항상 일정한 개수로 실행하는 역할을 합니다. ReplicaSet은 Pod를 항상 모니터링 하고 있다가, 존재하는 Pod의 수가 ReplicaSet을 생성할 때 설정한 Pod의 수보다 더 적으면 새롭게 Pod를 생성합니다.
 
 일반적으로는 ReplicaSet의 상위 개념인 Deployment를 통해 Pod를 관리합니다.
 
-## Deployment: Pod 배포 관리자
+## Deployment
 
 ReplicaSet의 상위 개념으로, Deployment를 통해 특정 버전으로 배포된 애플리케이션을 새로운 버전으로 다운 타임 없이 안정적으로 배포할 수 있습니다.
 
 - 설정한 Pod의 수를 유지하기 위해 내부적으로는 ReplicaSet을 사용합니다.
 - Deployment는 애플리케이션의 롤아웃 및 롤백과 같은 고급 기능을 제공하여 새로운 버전의 애플리케이션을 안정적으로 배포할 수 있습니다.  
-  \*롤아웃(rollout): 소프트웨어 업데이트나 변경 사항을 시스템에 점진적으로 적용하고 배포하는 과정
+<p style={{color:'gray'}}>*롤아웃(rollout): 소프트웨어 업데이트나 변경 사항을 시스템에 점진적으로 적용하고 배포하는 과정</p>
 
 ### Deployment 생성해보기
 
@@ -240,7 +240,7 @@ ReplicaSet의 상위 개념으로, Deployment를 통해 특정 버전으로 배�
 
    ![introduce_deploy_get_deleted_pod](/img/hello-k8s/introduce_deploy_get_deleted_pod.png)
 
-## Service: 클러스터 통신 담당
+## Service
 
 Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽에 노출시키는 역할을 합니다. 애플리케이션의 여러 인스턴스가 각기 다른 Pod에서 동작하더라도 서비스를 사용하면 모든 Pod에 대한 단일 DNS 이름과 IP 주소를 갖게 됩니다. 또한 Pod가 종료되거나 새로 생성되더라도 서비스의 IP 주소와 DNS 이름은 변하지 않습니다.
 
@@ -301,7 +301,7 @@ Pod에서 실행중인 애플리케이션을 클러스터 내/외부 트래픽�
 
 6. 터미널에서 `ctrl + c` (window) 또는 `cmd + c` (mac)를 입력하면 노출시킨 서비스를 종료합니다.
 
-## Namespace: 논리적인 리소스 구분 단위
+## Namespace
 
 네임스페이스는 쿠버네티스 클러스터 내의 리소스를 구분하고 격리하기 위한 쿠버네티스의 오브젝트입니다. 네임스페이스를 사용하면 각 환경에 해당하는 리소스를 효과적으로 관리하고 분리할 수 있습니다.
 
