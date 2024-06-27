@@ -394,7 +394,7 @@ https://raw.githubusercontent.com/whatap/k8s-edu-storage/master/k8s-object/hands
    ![img_16.png](/img/ebu/img_16.png)
 
 7. Chrome 에서 위 명령을 쳐서 나온 출력 주소를 입력하여 접속합니다. 아래와 같은 화면이 나온다면 정상적으로 애플리케이션이 배포 된 것입니다.
-   ![img_17.png](/img/ebu/img_17.png)
+   ![service_web](/img/ebu/service_web.png)
 
 ## 애플리케이션 살펴보기
 
@@ -543,11 +543,11 @@ CPU 부하 상승 버튼을 눌러 이벤트를 발생시켜보고 원인을 추
 <details>
 <summary>왜 CPU의 부하가 상승했을까요?</summary>
 
-   ![img_33.png](/img/ebu/img_33.png)
+![img_33.png](/img/ebu/img_33.png)
 CPU 부하 상승 버튼을 누른 뒤에 액티브 트랜젝션 수가 늘어나는 것을 확인할 수 있습니다.  
-이제 이 액티브 트랜젝션을 누른 뒤 오래 걸린 트랜젝션을 선택해보면 아래와 같은 콜스택을 확인할 수 있습니다.  
+이제 이 액티브 트랜젝션을 누른 뒤 오래 걸린 트랜젝션을 선택해보면 아래와 같은 콜스택을 확인할 수 있습니다.
 
-   ![img_34.png](/img/ebu/img_34.png)
+![img_34.png](/img/ebu/img_34.png)
 
 CallerService#isPrime() : 소수를 판단하는 로직에서 현재 진행 중이라는 것을 알 수 있습니다.
 
